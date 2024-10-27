@@ -1,4 +1,6 @@
-public class Carro {
+package Carro;
+// Arquivo CarroEncapsulamento.java
+public class CarroEncapsulamento {
     private Double velocidade;
     private String modelo;
     private boolean farolAceso;
@@ -6,7 +8,7 @@ public class Carro {
     private final double ACELERACAO = 10.0; // Incremento de velocidade ao acelerar
 
     // Construtor
-    public Carro(String modelo) {
+    public CarroEncapsulamento(String modelo) {
         this.modelo = modelo;
         this.velocidade = 0.0;
         this.farolAceso = false;
@@ -63,7 +65,7 @@ public class Carro {
         System.out.println("Farol: " + (farolAceso ? "Aceso" : "Apagado"));
     }
 
-    // Getters e Setters
+    // Getters e Setters para encapsulamento
     public Double getVelocidade() {
         return velocidade;
     }
@@ -88,17 +90,8 @@ public class Carro {
         return farolAceso;
     }
 
-'''
-Atributos:
-    farolAceso: Para controlar o estado do farol (aceso ou apagado).
-    VELOCIDADE_MAXIMA e ACELERACAO: Constantes para definir a velocidade máxima e o incremento de velocidade ao acelerar.
+    public void setFarolAceso(boolean farolAceso) {
+        this.farolAceso = farolAceso;
+    }
 
-Métodos Adicionais:
-    acenderFarol() e apagarFarol(): Para controlar o estado do farol.
-    exibirStatus(): Exibe o modelo, a velocidade atual e o estado do farol.
-
-Controle de Velocidade:
-    acelerar() verifica se a velocidade máxima foi atingida antes de incrementar.
-    frear() verifica se o carro está em movimento e reduz a velocidade progressivamente.
-'''
 }
